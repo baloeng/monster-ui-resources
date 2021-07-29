@@ -1,0 +1,2096 @@
+@import url('../../../css/vendor/bootstrap-tour.css');
+/* style.css */
+#ws_callflow > .callflow {
+	float: left;
+	width: 85%;
+}
+
+#ws_callflow .callflow .root,
+.callflow-preview  .callflow .root {
+	width: 322px;
+}
+
+#ws_callflow .callflow .root > .top_bar,
+.callflow-preview .callflow .root > .top_bar {
+	background: #0081D6;
+	height: 25px;
+	text-align: left;
+	border-radius: 6px 6px 0 0;
+}
+
+#ws_callflow .callflow .root > .top_bar > span,
+.callflow-preview .callflow .root > .top_bar > span {
+	line-height: 25px;
+}
+
+#ws_callflow .callflow .root > .top_bar .name,
+.callflow-preview .callflow .root > .top_bar .name {
+	float: left;
+	margin-left: 10px;
+	font-weight: normal;
+	color: white;
+	cursor: default;
+}
+
+#ws_callflow .callflow .root > .top_bar .add_number,
+.callflow-preview .callflow .root > .top_bar .add_number {
+	float: right;
+}
+
+#ws_callflow .callflow .root > .content .number_row,
+.callflow-preview .callflow .root > .content .number_row {
+	height: 30px;
+	background: #0081D6;
+	border-top: 1px solid white
+}
+
+#ws_callflow .callflow .root > .content .number_row:last-child {
+	background: none;
+	background-color: #0081D6;
+	height: 30px;
+	border-radius: 0px 0px 2px 2px;
+}
+
+.callflow-preview .callflow .root > .content .number_row:last-child:not(:first-child) {
+	display: none !important;
+}
+
+#ws_callflow .callflow .root > .content .number_column,
+.callflow-preview .callflow .root > .content .number_column {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-size: 11px;
+	text-indent: 15px;
+	text-align: left;
+	position: relative;
+	color: white;
+}
+
+#ws_callflow .callflow .root > .content .number_column.full,
+.callflow-preview .callflow .root > .content .number_column.full {
+	width: 100%;
+	text-align: center;
+}
+
+#ws_callflow .callflow .root > .content .number_column.second,
+.callflow-preview .callflow .root > .content .number_column.second {
+	width: 162px;
+	border-left: 1px solid white;
+}
+
+#ws_callflow .callflow .root > .content .number_column.first,
+.callflow-preview .callflow .root > .content .number_column.first {
+	width: 159px;
+}
+
+#ws_callflow .callflow .root > .content .number_column.empty,
+.callflow-preview .callflow .root > .content .number_column.empty {
+	color: white;
+	cursor: default;
+}
+
+#ws_callflow .callflow .root > .content .number_column.add-number,
+.callflow-preview .callflow .root > .content .number_column.add-number {
+    cursor: pointer;
+	background: #22A5FF;
+}
+
+#ws_callflow .callflow .root > .content .number_column .delete,
+.callflow-preview .callflow .root > .content .number_column .delete {
+	background-image: url(static/images/btn_delete.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 6px;
+	height: 6px;
+	display: inline-block;
+	position: absolute;
+	padding: 5px;
+	right: 0px;
+	top: 0px;
+	cursor: pointer;
+}
+
+#ws_callflow .callflow .root > .content .number_column .delete:hover,
+.callflow-preview .callflow .root > .content .number_column .delete:hover {
+	background-image: url(static/images/btn_delete_blue.png);
+}
+
+.callflow-preview span.delete,
+.callflow-preview .number_column.empty,
+.callflow-preview span.edit_icon {
+	display: none !important;
+}
+
+#ws_callflow .callflow .node,
+.callflow-preview .callflow .node {
+	display: inline-block;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+
+#ws_callflow .callflow .node.disabled,
+.callflow-preview .callflow .node.disabled {
+	opacity: 0.6;
+}
+
+#ws_callflow .callflow .node[name="root"],
+.callflow-preview .callflow .node[name="root"] {
+	cursor: default;
+}
+
+#ws_callflow .callflow .node .node-options .delete,
+.callflow-preview .callflow .node .node-options .delete {
+	background-image: url(static/images/btn_delete.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 5px;
+	cursor: pointer;
+	color: #555;
+}
+
+#ws_callflow .callflow .node .node-options .delete:hover,
+.callflow-preview .callflow .node .node-options .delete:hover {
+	background-image: url(static/images/btn_delete_blue.png);
+}
+
+#ws_callflow .tool .fa,
+.callflow-preview .tool .fa {
+	margin: 2px 2px 5px;
+	color: white;
+	display: inline-block;
+}
+
+#ws_callflow .tools .category,
+.callflow-preview .tools .category {
+	text-align: center;
+	background: #0081D6;
+	background-position: top center;
+	cursor: default;
+	border-bottom: 1px solid white;
+}
+
+#ws_callflow .tools .category .content,
+.callflow-preview .tools .category .content {
+	background-color: white;
+	border: 1px solid #0081D6;
+	padding: 1px 0px 3px;
+}
+
+#ws_callflow .tools .open,
+.callflow-preview .tools .open {
+	font-size: 12px;
+	height: 26px;
+	line-height: 26px;
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+
+#ws_callflow .tools .active .open,
+.callflow-preview .tools .active .open {
+	color: white;
+	position: relative;
+}
+
+#ws_callflow .tools .active .open::before,
+.callflow-preview .tools .active .open::before {
+	content: '\f078';
+	font: normal normal normal 14px/1 FontAwesome;
+	display: inline-block;
+	vertical-align: top;
+	width: 16px;
+	height: 14px;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	color: white;
+}
+
+#ws_callflow .tools .inactive .open,
+.callflow-preview .tools .inactive .open {
+	color: white;
+	position: relative;
+	cursor: pointer;
+}
+
+#ws_callflow .tools .inactive .open:hover,
+.callflow-preview .tools .inactive .open:hover {
+	background: #22A5FF;
+}
+
+#ws_callflow .tools .inactive .open::before,
+.callflow-preview .tools .inactive .open::before {
+	content: '\f054';
+	font: normal normal normal 14px/1 FontAwesome;
+	display: inline-block;
+	vertical-align: top;
+	width: 16px;
+	height: 14px;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	color: white;
+}
+
+#ws_callflow .tools .tool,
+.callflow-preview .tools .tool {
+	background: white;
+	float: left;
+	width: 78px;
+	padding-left: 1px;
+	padding-top: 1px;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+	cursor: grab;
+	margin: 1px 1px 1px 2px;
+}
+
+#ws_callflow .destination,
+.callflow-preview .destination {
+	border-radius: 2px;
+	border: 3px solid #22A5FF;
+}
+
+#ws_callflow .tools .tool .action,
+.callflow-preview .tools .tool .action {
+	z-index: 19;
+	height: 53px;
+	border-radius: 6px;
+	background: #0081D6;
+	color: white;
+	border: 1px solid #0081D6;
+	padding-top: 7px;
+	width: 76px;
+}
+
+#ws_callflow .tools .tool .action:hover,
+.callflow-preview .tools .tool .action:hover {
+	background: #22A5FF;
+	border: 1px solid #22A5FF;
+}
+
+
+#ws_callflow .tools .app_list_nav,
+.callflow-preview .tools .app_list_nav {
+	background: white;
+}
+
+#ws_callflow .callflow .icons_black.node,
+.callflow-preview .callflow .icons_black.node {
+	width: 132px;
+	height: 84px;
+	background: #0081D6;
+	border-radius: 6px;
+}
+
+.callflow-preview .children .child:last-child:not(:first-child),
+#ws_cf_flow .children .child:last-child:not(:first-child) {
+	padding-right: 10px;
+}
+
+.callflow-preview .children .child:first-child:not(:last-child),
+#ws_callflow #ws_cf_flow .children .child:first-child:not(:last-child) {
+	padding-left: 10px;
+}
+
+#ws_callflow .children > .child > .div_line,
+.callflow-preview .children > .child > .div_line {
+	display: inline-block;
+	height: 6px;
+	width: 100%;
+	background-image: url(static/images/line_callflow.png);
+	background-repeat: repeat-x;
+	margin-top: -33px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 0px;
+	float: left;
+}
+#ws_callflow #ws_cf_flow .children > .child:first-child > .div_line,
+.callflow-preview .children > .child:first-child > .div_line {
+	width: 50%;
+	float: right;
+}
+.callflow-preview .children > .child:last-child > .div_line,
+#ws_callflow .children > .child:last-child > .div_line {
+	width: 50%;
+	float: left;
+}
+
+#ws_callflow .children > .child:first-child:last-child > .div_line,
+.callflow-preview .children > .child:first-child:last-child > .div_line {
+	display: none;
+}
+
+#ws_callflow .children > .child > .span_arrow,
+.callflow-preview .children > .child > .span_arrow {
+	display: inline-block;
+	width: 145px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 2px 0px 2px;
+	padding: 0px;
+	position: relative;
+}
+
+#ws_callflow .children > .child > .span_arrow.small,
+.callflow-preview .children > .child > .span_arrow.small {
+	height: 31px;
+	background-image: url(static/images/center_arrow.png);
+}
+
+#ws_callflow .children > .child:first-child > .span_arrow.small,
+.callflow-preview .children > .child:first-child > .span_arrow.small {
+	background-image: url(static/images/left_arrow.png);
+}
+
+#ws_callflow .children > .child:last-child > .span_arrow.small,
+.callflow-preview .children > .child:last-child > .span_arrow.small {
+	background-image: url(static/images/right_arrow.png);
+}
+
+#ws_callflow .children > .child:first-child:last-child > .span_arrow.small,
+.callflow-preview .children > .child:first-child:last-child > .span_arrow.small {
+	background-image: url(static/images/small_arrow.png);
+}
+
+#ws_callflow .children > .child > .span_arrow.large,
+.callflow-preview .children > .child > .span_arrow.large {
+	float: none;
+	height: 48px;
+	background-image: url(static/images/tall_arrow.png);
+}
+
+#ws_callflow .children > .child > .fa,
+.callflow-preview .children > .child > .fa {
+	font-size: 48px;
+	color: #303039;
+	margin: 9px 0 7px;
+}
+
+#ws_callflow .a_link_option,
+.callflow-preview .a_link_option {
+	color: white;
+	font-size: 17px;
+	display: block;
+	padding: 2px 0;
+}
+
+#ws_callflow .div_option,
+.callflow-preview .div_option {
+	display: inline-block;
+	line-height: 1;
+	width: 131px;
+	background-color: #22A5FF;
+	margin: 0 0 2px;
+	padding: 2px 0;
+	border: 1px solid #22A5FF;
+	border-radius: 2px;
+}
+
+#ws_callflow .div_icon,
+.callflow-preview .div_icon {
+	height: 46px;
+	padding: 0 10px;
+}
+
+#ws_callflow .div_icon > .fa,
+.callflow-preview .div_icon > .fa {
+	font-size: 23px;
+	/* margin-right: 7px; */
+	color: white;
+	vertical-align: top;
+}
+
+#ws_callflow .module,
+.callflow-preview .module {
+	font-size: 13px;
+	height: 49px;
+	margin-top: 15px;
+	cursor: default;
+}
+
+#ws_callflow .div_icon .module_name,
+.callflow-preview .div_icon .module_name {
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: top;
+	display: inline-block;
+	line-height: 13px;
+	width: 100%;
+	padding-top: 5px;
+	color: white;
+}
+
+#ws_callflow .details,
+.callflow-preview .details {
+	font-size: 10px;
+	overflow: hidden;
+	color: white;
+	text-overflow: ellipsis;
+	padding: 0 8px;
+}
+
+.dialog_popup.callflow-preview {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#ws_callflow .details a,
+.callflow-preview .details a {
+	color: white;
+	text-decoration: underline;
+}
+
+.callflow-preview * {
+	cursor: default !important; /* Only a preview, cannot click */
+}
+
+/* Add number and Edit name popups */
+.dialog_popup_new {
+	padding: 15px;
+}
+
+.dialog_popup_new .popup_field {
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 10px;
+}
+
+.dialog_popup_new .popup_field > * {
+	margin-right: 10px;
+}
+
+.dialog_popup_new .buttons {
+	text-align: center;
+}
+
+.dialog_popup_new form {
+	margin: 0;
+}
+
+.dialog_popup_new.edit_name {
+	width: 350px;
+}
+
+.dialog_popup_new.edit_name .fancy_help_text {
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.dialog_popup_new.edit_name input[type="checkbox"] {
+	margin: 0;
+}
+
+.dialog_popup_new.add_number_popup {
+	width: 475px;
+}
+
+.add_number_popup .popup_field label {
+	width: 110px;
+}
+
+.add_number_popup .number-selection-sidelink {
+	margin-left: 15px;
+}
+
+.add_number_popup input[type=radio] {
+	margin: -5px 5px 0 10px;
+}
+
+.add_number_popup #list_numbers {
+	width: 157px;
+}
+
+.add_number_popup #add_number_text {
+	width: 172px;
+}
+
+.add_number_popup .extensions_content,
+.add_number_popup .list_numbers_content {
+	display: inline-block;
+}
+
+/* has to match setting in js */
+.add_number_popup .list_numbers_content .chosen-drop {
+	width: 160px;
+}
+
+.add_number_popup .list_numbers_content .nav {
+	margin-top: 7px;
+}
+
+.fax_callflow_popup .checkbox_field,
+.fax_callflow_popup .checkbox_field label {
+	padding: 0px;
+}
+
+.fax_callflow_popup .checkbox_field #t_38_checkbox {
+	float: left;
+}
+
+#callflow-content .ui-draggable-dragging {
+	cursor: -moz-grabbing !important;
+	cursor: -webkit-grabbing !important;
+	cursor: grabbing !important;
+}
+
+#ws_callflow .root .top_bar .edit_icon,
+.callflow-preview .root .top_bar .edit_icon {
+	cursor: pointer;
+	display: inline-block;
+	margin: 3px 0 0 7px;
+	font-size: 16px;
+	line-height: 18px !important;
+	color: white;
+}
+
+#ws_callflow .root .top_bar .edit_icon i,
+.callflow-preview .root .top_bar .edit_icon i {
+	color: white;
+}
+
+/* callflow.css */
+.callflows-port .monster-button-primary {
+	color: white;
+}
+
+.callflows-port .buttons-wrapper .btn,
+.callflows-port .buttons-wrapper .monster-button {
+	margin-right: 10px;
+}
+
+.callflows-port .monster-button-primary:hover {
+	border-color: #0081D6;
+	background: #0081D6;
+}
+
+#callflow_container .tab-content {
+	overflow: visible;
+}
+
+#callflow_container .callflow-intro {
+	padding: 0 0 0 40px;
+}
+
+#callflow_container .callflow-intro .callflow-intro-title {
+	font-weight: normal;
+	font-size: 23px;
+}
+
+#callflow_container .callflow-help, .popup_help .callflow-help {
+	background: url(static/images/callflow_help.gif) no-repeat center;
+	height: 644px;
+	width: 847px;
+	margin: 20px auto auto;
+	border-radius: 10px;
+}
+
+#callflow_container .callflow-content.edition-mode .callflow-help {
+	display: none;
+}
+
+#callflow_container .callflow-content.listing-mode #ws_callflow {
+	display: none;
+}
+
+#ws_callflow,
+.callflow-preview {
+	width: 100%;
+}
+
+#ws_callflow #hidden_callflow_warning {
+	color: red;
+	display: none;
+	font-style: italic;
+	font-weight: lighter;
+	margin: auto auto 15px;
+	text-align: center;
+	width: 50%;
+}
+
+#ws_callflow #callflow_header,
+.callflow-preview #callflow_header {
+	height: 30px;
+	margin-top: 15px;
+	width: 100%;
+}
+
+#ws_callflow #callflow_header #pending_change,
+.callflow-preview #callflow_header #pending_change {
+	text-align: center;
+	display: none;
+}
+
+#ws_callflow #callflow_header #pending_change span,
+.callflow-preview #callflow_header #pending_change span {
+	color: #22A5FF;
+	font-weight: lighter;
+	font-style: italic;
+}
+
+#ws_callflow #ws_cf_flow,
+.callflow-preview #ws_cf_flow {
+	width: 100%;
+	overflow-x: auto;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#ws_callflow .callflow-preview,
+.callflow-preview .callflow-preview {
+	width: 100%;
+	overflow-x: auto;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#ws_callflow span.flow,
+.callflow-preview span.flow {
+	width: 80%;
+}
+
+#ws_callflow .child,
+.callflow-preview .child {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	white-space: normal;
+}
+
+#ws_callflow .branch,
+.callflow-preview .branch {
+	display: block;
+	text-align: center;
+}
+
+#ws_callflow .node.active,
+.callflow-preview .node.active {
+	background-color: #fff;
+	border-radius: 2px;
+	border: 3px solid #22A5FF;
+}
+
+#ws_callflow .node.inactive,
+.callflow-preview .node.inactive {
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+
+#ws_callflow .children,
+.callflow-preview .children {
+	display: block;
+	white-space: pre;
+}
+
+#ws_callflow .flowchart,
+.callflow-preview .flowchart {
+	margin-right: 180px;
+	overflow: auto;
+}
+
+#ws_callflow .tools,
+.callflow-preview .tools {
+	float: right;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#ws_callflow .tools #ws_cf_tools,
+.callflow-preview .tools #ws_cf_tools {
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom:30px;
+	width: 168px;
+}
+
+#ws_callflow .tools .search-box,
+.callflow-preview .tools .search-box {
+	border-left: 1px solid #0081D6;
+	border-right: 1px solid #0081D6;
+	position: relative;
+}
+
+#ws_callflow .tools .search-box input,
+.callflow-preview .tools .search-box input {
+	width: 120px;
+	height: 15px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 3px;
+	border: none;
+	box-shadow: none;
+}
+
+#ws_callflow .tool,
+.callflow-preview .tool {
+	text-align: center;
+	vertical-align: middle;
+}
+
+#ws_callflow .tool_name,
+.callflow-preview .tool_name {
+	font-size: 11px;
+	line-height: 11px;
+}
+
+#ws_callflow .tools .category.inactive .content,
+.callflow-preview .tools .category.inactive .content {
+	display: none;
+}
+
+#ws_callflow .tool .action.inactive,
+.callflow-preview .tool .action.inactive {
+	display: none;
+}
+
+#ws_callflow .tool .action.active,
+.callflow-preview .tool .action.active {
+	z-index: 10000;
+}
+
+#ws_callflow .title,
+.callflow-preview .title {
+	background: #0081D6;
+	font-size: 15px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 6px 6px 0 0;
+	text-align: center;
+	color: #fff;
+	font-weight: normal;
+}
+
+#callflow_container .wrapper_callflow_buttons,
+.callflow-preview .wrapper_callflow_buttons {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 5px;
+}
+
+#callflow_container .wrapper_callflow_buttons .monster-button,
+.callflow-preview  .wrapper_callflow_buttons .monster-button {
+	width: 114px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 0;
+}
+
+#callflow_container .wrapper_callflow_buttons .monster-button:first-child,
+.callflow-preview .wrapper_callflow_buttons .monster-button:first-child {
+	margin-right: 10px;
+}
+
+#callflow_container .callflow_helpbox_wrapper,
+.callflow-preview .callflow_helpbox_wrapper {
+	position: absolute;
+	right: 185px;
+	width: 160px;
+	top: 100px;
+	display: none;
+	z-index: 100;
+}
+
+#callflow_container .callflow_helpbox_wrapper .tip_box,
+.callflow_preview .callflow_helpbox_wrapper .tip_box {
+	background-color: #3D3D3D;
+	border: 1px solid #333333;
+	border-radius: 2px;
+	opacity: 0.8;
+	padding: 5px 2px 5px 9px;
+	text-align: left;
+	font-size: 10px;
+	line-height: 12px;
+	color: white;
+}
+
+#callflow_container .tooltip,
+.callflow_preview .tooltip {
+	float: right;
+	margin-top: 6px;
+	cursor: pointer;
+}
+
+#callflow_container .pulse-box,
+.callflow-preview .pulse-box {
+	-webkit-animation: "pulse-box" 1s ease-in-out 0 infinite alternate;
+
+	animation-name: pulse-box;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@-webkit-keyframes pulse-box {
+	0% { box-shadow: 0px 0px 0px #09DB4B inset, 0px 0px 0px #09DB4B; }
+	100% { box-shadow: 0px 0px 30px #09DB4B inset, 0px 0px 10px #09DB4B; }
+}
+
+@keyframes pulse-box {
+	0% { box-shadow: 0px 0px 0px #09DB4B inset, 0px 0px 0px #09DB4B; }
+	100% { box-shadow: 0px 0px 30px #09DB4B inset, 0px 0px 10px #09DB4B; }
+}
+
+/* JR's customization */
+#callflow_container,
+.callflow-preview .callflow {
+	min-height: 100%;
+}
+
+
+/* JR's work for left bar, from accountBrowser */
+#callflow_container .callflow-content {
+	margin-left: 241px;
+	background-color: #fff;
+	overflow-y: auto;
+}
+
+.callflow-preview.callflow {
+	background-color: #fff;
+	overflow-y: auto;
+}
+
+#callflow_container .left-bar-container {
+	float: left;
+	background-color: #F3F3F3;
+	border-right: solid 1px #999;
+	width: 241px;
+	overflow: hidden;
+	border-radius: inherit;
+}
+
+#callflow_container .left-bar-container .search-box {
+	width: 221px;
+	padding: 18px 10px;
+	border-bottom: solid 1px #999;
+}
+
+#callflow_container .left-bar-container .search-box .search-query {
+	width: 178px;
+}
+
+#callflow_container .left-bar-container.ab-dropdown .list-container {
+	max-height: 300px;
+}
+
+#callflow_container .left-bar-container .list {
+	margin: 0;
+	list-style: none;
+	float: left;
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 241px;
+	height: 100%;
+	max-height: inherit;
+}
+
+#callflow_container .left-bar-container .list-add {
+	line-height: 50px;
+	max-height: 50px;
+	font-weight: 600;
+	background-color: #eee;
+	width: 241px;
+	color: #303039;
+}
+
+#callflow_container .left-bar-container .list-add i {
+	margin: 10px;
+}
+
+#callflow_container .left-bar-container .list-add:hover {
+	background: #E3E3E3;
+	color: #303039;
+	cursor: pointer;
+}
+
+#callflow_container .left-bar-container .list-add:hover i {
+	color: #303039;
+}
+
+#callflow_container .left-bar-container .list-loader {
+	padding: 10px;
+	border-bottom: solid 1px #ccc;
+}
+
+#callflow_container .left-bar-container .list-element {
+	line-height: 60px;
+	max-height: 60px;
+	overflow: hidden;
+	border-bottom: solid 1px #ccc;
+}
+
+#callflow_container .left-bar-container .list-element.list-element-active > div,
+#callflow_container .left-bar-container .list-element.list-element-active > div:hover {
+	background: #22A5FF;
+	color: white;
+	cursor: default;
+}
+
+#callflow_container .left-bar-container .list-element > div {
+	background-color: #f6f6f6;
+	background-image: -webkit-linear-gradient(top, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 95%) 100%);
+	background-image:    -moz-linear-gradient(top, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 95%) 100%);
+	background-image:     -ms-linear-gradient(top, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 95%) 100%);
+	background-image:      -o-linear-gradient(top, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 95%) 100%);
+	background-image:         linear-gradient(top, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 95%) 100%);
+	color: #555;
+	padding-left: 10px;
+}
+
+#callflow_container .left-bar-container .list-element > div:hover {
+	background: white;
+	cursor: pointer;
+	/*color: #22a5ff;*/
+}
+
+#callflow_container .left-bar-container .search-link {
+	border-bottom: solid 1px #ccc;
+	text-align: center;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 5px;
+	color: #555;
+	background-color: #f6f6f6;
+	background-image: -webkit-linear-gradient(top, hsl(0, 0%, 90%) 0%, hsl(0, 0%, 85%) 100%);
+	background-image:    -moz-linear-gradient(top, hsl(0, 0%, 90%) 0%, hsl(0, 0%, 85%) 100%);
+	background-image:     -ms-linear-gradient(top, hsl(0, 0%, 90%) 0%, hsl(0, 0%, 85%) 100%);
+	background-image:      -o-linear-gradient(top, hsl(0, 0%, 90%) 0%, hsl(0, 0%, 85%) 100%);
+	background-image:         linear-gradient(top, hsl(0, 0%, 90%) 0%, hsl(0, 0%, 85%) 100%);
+}
+#callflow_container .left-bar-container .search-link:hover {
+	background: #eee;
+	cursor: pointer;
+}
+
+#callflow_container .left-bar-container .search-link .search-value {
+	font-weight: 600;
+	text-shadow: 1px 1px 0px #ccc;
+}
+
+#callflow_container .left-bar-container .search-link .search-reset {
+	color: #22a5ff;
+	line-height: 30px;
+	font-weight: 600;
+}
+
+#callflow_container .left-bar-container .search-link:not(.active) .search-reset {
+	display: none;
+}
+#callflow_container .left-bar-container .search-link.active > *:not(.search-reset) {
+	display: none;
+}
+
+#callflow_container .list-container .link .title {
+	font-size: 16px;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#callflow_container .list-container .link .title.standalone {
+	height: 60px;
+	line-height: 60px;
+}
+
+#callflow_container .list-container .link .description {
+	font-size: 10px;
+	height: 20px;
+	line-height: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.callflow-preview #callflow_jump {
+	margin-bottom: 10px;
+}
+
+/* Popups.css */
+.dialog_popup {
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.dialog_popup h1 {
+	padding: 0 0 10px 0;
+	text-shadow: none;
+	font-size: 24px;
+	font-weight: bold;
+	color: #29ABE1;
+}
+
+.dialog_popup .btn_wrapper_popup {
+	float: left;
+	width: 100%;
+	padding: 30px 0px 10px 0px;
+}
+
+.dialog_popup .form_content {
+	display: inline-block;
+}
+
+.dialog_popup .form_content label {
+	font-weight: bold;
+	width: auto;
+	margin-right: 10px;
+	color: #333;
+	float: left;
+	padding-top: 5px;
+}
+
+.dialog_popup .form_content select {
+	width: 100%;
+	max-width: 200px;
+}
+
+.dialog_popup .form_content .select_wrapper {
+	float: left;
+}
+
+.dialog_popup .form_content .select_wrapper .action_links_div a {
+	float: right;
+	width: 100%;
+	text-align: right;
+	text-decoration: underline;
+	color: #22A5FF;
+	margin-top: 3px;
+}
+
+.dialog_popup .parameter_div {
+	padding: 10px 0px 10px 0px;
+	width: auto;
+	max-width: 300px;
+	margin: auto;
+	display: block;
+}
+
+.dialog_popup .parameter_div .parameter_description {
+	font-size: 10px;
+	border-radius: 2px;
+}
+
+.dialog_popup input.size2 {
+	width: 20px;
+}
+
+.inline_popup {
+	padding: 0 20px;
+}
+
+.inline_popup.small .main_content {
+	width: 450px;
+}
+
+.inline_popup.small .main_content .pill-content .clearfix {
+	display: block;
+}
+
+.dialog_popup .fancy_help_text {
+	font-size: 12px;
+}
+
+/* Whapps.css */
+.callflows-port .reset_all {
+	margin:0;
+	padding:0;
+	border:0;
+	font-weight:normal;
+	font-style:normal;
+	font-size:100%;
+	line-height:1;
+	font-family:inherit;
+}
+
+.callflows-port .reset_margin {
+	margin:0;
+}
+
+.callflows-port .reset_padding {
+	padding:0;
+}
+
+.callflows-port .reset_border {
+	border:0;
+	background-color: transparent;
+}
+
+.callflows-port .gradient_strong {
+	background:#434343;
+	background:-moz-linear-gradient(top, #434343 0, #353535 50%, #282828 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #434343), color-stop(50%, #353535), color-stop(100%, #282828));
+	background:-webkit-linear-gradient(top, #434343 0, #353535 50%, #282828 100%);
+	background:-o-linear-gradient(top, #434343 0, #353535 50%, #282828 100%);
+	background:-ms-linear-gradient(top, #434343 0, #353535 50%, #282828 100%);
+	background:linear-gradient(top, #434343 0, #353535 50%, #282828 100%);
+	filter:progid:dximagetransform.microsoft.gradient(startColorstr='#434343', endColorstr='#282828', GradientType=0);
+}
+
+.callflows-port .gradient_light {
+	background:#373737;
+	background:-moz-linear-gradient(top, #373737 0, #2e2e2e 50%, #2f2f2f 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #373737), color-stop(50%, #2e2e2e), color-stop(100%, #2f2f2f));
+	background:-webkit-linear-gradient(top, #373737 0, #2e2e2e 50%, #2f2f2f 100%);
+	background:-o-linear-gradient(top, #373737 0, #2e2e2e 50%, #2f2f2f 100%);
+	background:-ms-linear-gradient(top, #373737 0, #2e2e2e 50%, #2f2f2f 100%);
+	background:linear-gradient(top, #373737 0, #2e2e2e 50%, #2f2f2f 100%);
+	filter:progid:dximagetransform.microsoft.gradient(startColorstr='#373737', endColorstr='#2f2f2f', GradientType=0);
+}
+
+.callflows-port h1,
+.callflows-port h2,
+.callflows-port h3,
+.callflows-port h4,
+.callflows-port h5 {
+	color:#22A5FF;
+	font-weight:lighter;
+}
+
+.callflows-port h3 {
+	font-size: 17px;
+	font-weight: 400;
+}
+
+.callflows-port h1 {
+	font-size:24px;
+	letter-spacing: 1px;
+	margin-top: 0;
+	font-weight: 400;
+}
+
+.callflows-port hr {
+	margin: 0;
+	border-bottom: 1px solid #d4d4d4;
+}
+
+.callflows-port .monster-button {
+	min-width:100px;
+}
+
+.callflows-port input[type="file"] {
+	background-color:transparent;
+	padding-top:5px;
+}
+
+.callflows-port input {
+	color:#555;
+}
+
+.callflows-port ul, ol {
+	list-style: none;
+	margin: 0;
+}
+
+.callflows-port form .clearfix:last-child {
+	margin-bottom:0;
+}
+
+.callflows-port .toggled {
+	margin-bottom:30px;
+	margin-top:30px;
+}
+
+.callflows-port .whapp-header>h1, .whapp-header>h2, .whapp-header>h3 {
+	float:left;
+}
+
+.callflows-port .whapp-header>.buttons-right {
+	margin-top:10px;
+}
+
+.callflows-port .input-append>span.add-on {
+	-webkit-border-top-left-radius:2px;
+	-webkit-border-top-right-radius:0;
+	-webkit-border-bottom-right-radius:0;
+	-webkit-border-bottom-left-radius:2px;
+	-moz-border-radius-topleft:2px;
+	-moz-border-radius-topright:0;
+	-moz-border-radius-bottomright:0;
+	-moz-border-radius-bottomleft:2px;
+	border-top-left-radius:2px;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+	border-bottom-left-radius:2px;
+	margin:0;
+	margin-right:-1px;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.callflows-port .input-append>input {
+	-webkit-border-top-left-radius:0;
+	-webkit-border-top-right-radius:0;
+	-webkit-border-bottom-right-radius:0;
+	-webkit-border-bottom-left-radius:0;
+	-moz-border-radius-topleft:0;
+	-moz-border-radius-topright:0;
+	-moz-border-radius-bottomright:0;
+	-moz-border-radius-bottomleft:0;
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+	border-bottom-left-radius:0;
+}
+
+.callflows-port .pill-content {
+	background: white;
+	color: #565656;
+	padding: 10px 0;
+}
+
+.callflows-port .pill-content h3,
+.callflows-port .row h3 {
+	margin-bottom: 4px;
+	color: #22A5FF;
+}
+
+.callflows-port .pill-content .edit_create {
+	margin-left:20px;
+	display:inline;
+}
+
+.callflows-port .pill-content .edit_create a {
+	color: #EEE;
+}
+
+.callflows-port .pill-content .edit_create > a:not(:first-child) {
+	margin-left: 15px;
+}
+
+.callflows-port .btn.black:first-child {
+	border-radius: 2px 0 0 2px;
+}
+
+.callflows-port .btn.black:last-child {
+	border-radius: 0 2px 2px 0;
+}
+
+.callflows-port .btn.black {
+	background: white;
+	color: #565656;
+	text-shadow: none;
+	font-size: 13px;
+	border: 1px solid #bbbbbb;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.callflows-port .btn.black + .btn.black {
+	border-left: none;
+}
+
+.callflows-port .btn.black.activate {
+	border-color: #22A5FF;
+	color: white;
+	background: #22A5FF;
+}
+
+.callflows-port .btn.black:hover {
+	border-color: #22A5FF;
+	color: white;
+	background: #22A5FF;
+}
+
+.callflows-port .buttons-right {
+	text-align: right;
+}
+
+.callflows-port .buttons-right>.monster-button:not(:last-child) {
+	margin-right:6px;
+}
+
+.callflows-port .pasted>.monster-button:first-child {
+	-webkit-border-top-left-radius:2px;
+	-webkit-border-top-right-radius:0;
+	-webkit-border-bottom-right-radius:0;
+	-webkit-border-bottom-left-radius:2px;
+	-moz-border-radius-topleft:2px;
+	-moz-border-radius-topright:0;
+	-moz-border-radius-bottomright:0;
+	-moz-border-radius-bottomleft:2px;
+	border-top-left-radius:2px;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+	border-bottom-left-radius:2px;
+	margin-right:-4px;
+}
+
+.callflows-port .pasted>.monster-button:last-child {
+	-webkit-border-top-left-radius:0;
+	-webkit-border-top-right-radius:2px;
+	-webkit-border-bottom-right-radius:2px;
+	-webkit-border-bottom-left-radius:0;
+	-moz-border-radius-topleft:0;
+	-moz-border-radius-topright:2px;
+	-moz-border-radius-bottomright:2px;
+	-moz-border-radius-bottomleft:0;
+	border-top-left-radius:0;
+	border-top-right-radius:2px;
+	border-bottom-right-radius:2px;
+	border-bottom-left-radius:0;
+}
+
+/* From layout.css */
+.callflows-port .main_content {
+	margin: 0 auto;
+	padding: 10px 0 15px 0;
+	width: 800px;
+}
+
+/* Custom specific bootstrap */
+.callflows-port input[type="checkbox"] {
+	margin: 0 5px 0 0;
+}
+
+/* Hack for callflow quick edit popup */
+.dialog_popup.callflows-port form label:not(.monster-invalid) {
+	color: #333;
+}
+
+.dialog_popup.callflows-port form label.monster-switch {
+	width: auto;
+	margin-bottom: 7px;
+}
+
+.dialog_popup .form_content .field_wrapper {
+	float: left;
+	text-align: left;
+	width: 214px;
+}
+
+.dialog_popup .form_content .field_wrapper input[type="text"],
+.dialog_popup .form_content .field_wrapper input[type="number"] {
+	width: 200px;
+}
+
+.dialog_popup .form_content .field_wrapper select {
+	width: 214px !important;
+	max-width: 214px;
+}
+
+.dialog_popup .form_content .checkbox-label-wrapper {
+	padding-left: 140px;
+	text-align: left;
+	width: 200px;
+	margin-right: 0;
+	margin-bottom: 13px;
+	padding-top: 0;
+}
+
+.dialog_popup .dialog_content-part {
+	margin: 15px 0;
+}
+
+.dialog_popup .buttons-center,
+.dialog_popup .buttons-center {
+	padding: 10px 0 0;
+}
+
+.dialog_popup .buttons-center button,
+.dialog_popup .buttons-center .monster-button {
+	margin: 0 6px 14px;
+}
+
+.callflows-port form label:not(.monster-invalid) {
+	float: left;
+	font-size: 15px;
+	line-height: 18px;
+	padding-top: 6px;
+	text-align: right;
+	width: 130px;
+	color: #565656;
+}
+
+.callflows-port form label.monster-switch {
+	padding-top: 0;
+	width: auto;
+}
+
+.callflows-port form label.monster-checkbox {
+	margin-top: 5px;
+	display: inline-block;
+	width: auto;
+}
+
+.callflows-port label.monster-invalid {
+	position: relative;
+	color: orange;
+	margin-top: -10px;
+}
+
+.callflows-port form .input {
+	margin-left: 150px;
+}
+
+.callflows-port form .clearfix {
+	margin-bottom: 10px;
+}
+
+.callflows-port form .inputs-list label {
+	display: block;
+	float: none;
+	line-height: 18px;
+	margin-left: 20px;
+	padding: 0;
+	text-align: left;
+	white-space: normal;
+	width: auto;
+}
+
+.callflows-port form .inputs-list input[type="radio"],
+.callflows-port form .inputs-list input[type="checkbox"] {
+	float: left;
+	margin-bottom: 0;
+	margin-left: -20px;
+}
+
+.callflows-port form input.span4,
+.callflows-port form textarea.span4 {
+	display: inline-block;
+	float: none;
+	margin-left: 0;
+	width: 210px;
+}
+
+.callflows-port li {
+	color: #808080;
+	line-height: 18px;
+}
+
+/* Still Bootstrap, but Tabs */
+.callflows-port .tab-content > .tab-pane,
+.callflows-port .pill-content > .pill-pane,
+.callflows-port .tab-content > div,
+.callflows-port .pill-content > div {
+	display: none;
+}
+
+.callflows-port .tab-content > .active,
+.callflows-port .pill-content > .active {
+	display: block;
+}
+
+.callflows-port .tabs:after,
+.callflows-port .pills:after {
+	clear: both;
+}
+
+.callflows-port .tabs:before,
+.callflows-port .pills:before,
+.callflows-port .tabs:after,
+.callflows-port .pills:after {
+	content: "";
+	display: table;
+}
+
+.callflows-port .pills {
+	list-style: outside none none;
+	margin: 0 0 18px;
+	padding: 0;
+}
+
+.callflows-port .pills > li {
+	float: left;
+}
+
+.callflows-port .pills > li > a {
+	display: block;
+}
+
+.callflows-port .tabs {
+	list-style: none;
+	padding: 0;
+	background-color: transparent;
+}
+
+.callflows-port .tabs > li {
+	background: white;
+	border: none;
+	color: #565656;
+	float: left;
+	font-size: 12px;
+	position: relative;
+	border-radius: 6px 6px 0 0;
+}
+
+.callflows-port .tabs > li:first-child {
+}
+
+.callflows-port .tabs > li:last-child {
+}
+
+.callflows-port .tabs > li > a {
+	border-radius: 6px 6px 0 0;
+	display: block;
+	line-height: 34px;
+	padding: 0 15px;
+	color: #565656;
+	background: #e2e2e2;
+	margin-right: 2px;
+	margin-bottom: 3px;
+	font-size: 14px;
+}
+
+.callflows-port .tabs > li > a:hover {
+	text-decoration: none;
+}
+
+.callflows-port .tabs > li:first-child.active {
+	border-left:1px solid #22A5FF;
+}
+
+.callflows-port .tabs > li:last-child.active {
+	border-right:0;
+}
+
+.callflows-port .tabs > li > a > .fa {
+	margin-right: 5px;
+}
+
+.callflows-port .tabs > li > a > .icon {
+	margin-right: 3px;
+}
+
+.callflows-port .tabs > li > a:hover {
+	border-color: #22A5FF;
+	color: white;
+	background: #22A5FF;
+}
+
+.callflows-port .tabs > li > a:hover .fa {
+	color: white;
+}
+
+.callflows-port .tabs .active > a,
+.callflows-port .tabs .active > a:hover {
+	font-weight:bold;
+	text-decoration: none;
+	border-color: #22A5FF;
+	color: white;
+	background: #22A5FF;
+}
+
+.callflows-port .tabs .active > a .fa {
+	color: white;
+}
+
+.callflows-port .tabs li:first-child.active > a {
+	border-left : none;
+}
+
+.callflows-port .popover-content {
+	color: #333;
+}
+
+.callflows-port .help_box {
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 2px 2px 2px 2px;
+	background: #22A5FF;
+	text-align: center;
+	font-style: normal;
+	color: white;
+}
+
+/********** Misc images **********/
+
+.callflows-port#ring_group_popup #two_columns .column.right ul.connect.no_element {
+	background: url(static/images/empty_ring_group.png) no-repeat center;
+}
+
+.callflows-port #two_columns .wrapper li a.drag_btn {
+	background-image: url(static/images/drag_btn_28.png);
+}
+
+.callflows-port .search_box .searchsubmit1 {
+	background: url(static/images/search_left.png) no-repeat top left;
+}
+.callflows-port .search_box .searchsubmit2 {
+	background: url(static/images/search_right.png) no-repeat top right;
+}
+.callflows-port .search_box .searchfield {
+	background: url(static/images/search_mid.png) repeat-x;
+}
+
+
+#callflow_container .entity-manager {
+	padding: 10px;
+	max-width: 1280px;
+	margin: auto;
+	color: #303039;
+}
+
+#callflow_container .entity-manager .grid-header {
+	font-size: 34px;
+	line-height: 40px;
+	margin: 20px 10px;
+}
+
+#callflow_container .entity-manager .entity-element {
+	display: inline-block;
+	margin: 10px;
+	text-align: center;
+	width: 120px;
+	height: 120px;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	border: solid 1px #303039;
+	box-sizing: border-box;
+	border-radius: 2px;
+	vertical-align: top;
+}
+#callflow_container .entity-manager .entity-element.callflow-element {
+	width: 260px;
+	height: 260px;
+	float: left;
+	font-size: 50px;
+	font-weight: 300;
+}
+#callflow_container .entity-manager .entity-element:hover {
+	background-color: #f0f0f9;
+}
+
+#callflow_container .entity-manager .entity-element > div {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#callflow_container .entity-edition,
+#callflow_container .entity-manager .callflow-edition {
+	display: none;
+}
+
+#callflow_container .entity-edition .left-bar-container {
+	box-sizing: border-box;
+}
+
+#callflow_container .entity-edition .callflow-content {
+	margin: 0;
+	float: left;
+	box-sizing: border-box;
+	width: 800px; /* Arbitrary width if calc not supported */
+	width: -webkit-calc(100% - 241px);
+	width: -moz-calc(100% - 241px);
+	width: calc(100% - 241px);
+}
+
+
+#callflow_container .entity-header{
+	padding: 18px 40px;
+	height: 71px;
+	box-sizing: border-box;
+	border-bottom: solid 1px #999;
+}
+#callflow_container .entity-header .entity-title {
+	color: #22a5ff;
+	font-size: 30px;
+	line-height: 36px;
+	float:left;
+}
+#callflow_container .entity-header .back-button {
+	float: right;
+}
+
+#callflow_container .entity-header .superadmin-mode {
+	float: right;
+	line-height: 35px;
+	margin-right: 50px;
+	display: inline-block;
+}
+
+#callflow_container .entity-header .superadmin-mode .switch-title {
+	color: #22a5ff;
+	margin-right: 5px;
+}
+
+#callflow_container .entity-content {
+	padding: 20px 40px;
+}
+
+/* Account Settings */
+#callflow_container .account-settings-container {
+	color: #303039;
+}
+
+#callflow_container .account-settings-container .settings-section .section-title {
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+#callflow_container .account-settings-container .entity-content {
+	padding: 40px;
+}
+
+#callflow_container .account-settings-container #account_settings_form {
+	min-width: 400px;
+	max-width: 1140px;
+	margin: auto;
+}
+
+#callflow_container .account-settings-container .tab-content {
+	background-color: #f0f0f9;
+	padding: 20px;
+}
+
+#callflow_container .account-settings-container .upload-toggle {
+	margin-left: 10px;
+}
+#callflow_container .account-settings-container .upload-div {
+	display: none;
+	margin-top: 20px;
+}
+#callflow_container .account-settings-container .upload-div .upload-input {
+	margin: 0;
+	width: 330px;
+}
+#callflow_container .account-settings-container .upload-div button.upload-action {
+	margin-left: 10px;
+	min-width: 20px;
+	padding-right: 10px;
+}
+#callflow_container .account-settings-container .upload-div .file-upload {
+	margin: 0;
+	display: inline-block;
+}
+#callflow_container .account-settings-container .upload-div .file-upload > input {
+	margin: 0;
+	margin-left: 180px;
+	width: 110px;
+	padding: 6px;
+}
+#callflow_container .account-settings-container .upload-div .file-upload > button {
+	width: 100px;
+	min-width: initial;
+}
+#callflow_container .account-settings-container .action-bar {
+	padding-top: 15px;
+}
+
+
+.media-edit-callflow-popup .shoutcast-div,
+#callflow_container .account-settings-container .shoutcast-div {
+	display: none;
+}
+
+.media-edit-callflow-popup .shoutcast-div.active,
+#callflow_container .account-settings-container .shoutcast-div.active {
+	display: block;
+}
+
+/* Blacklist part */
+/* We can't name space it because some dialogs from callflow use the clear... If we were to change it we'd have to update those popups too */
+.clear {
+	clear: both;
+}
+
+#callflow_container .blacklists-wrapper {
+	padding: 20px;
+	background: #FFF;
+	border: 1px solid #ccc;
+	width: 800px;
+}
+
+#callflow_container .blacklists-wrapper .items-selector .box-selector ul {
+	height: 250px;
+}
+
+/* Media shoutcast addition */
+.media-edit-callflow-popup .form_content {
+	width: 360px;
+}
+
+.media-edit-callflow-popup #edit_link {
+	display: none;
+}
+
+.media-edit-callflow-popup #edit_link.active {
+	display: block;
+}
+
+.callflows-port .monster-button-danger,
+#callflow_container .monster-button-danger {
+	color: white;
+	border-color: #B91B0C;
+	background: #B91B0C;
+}
+
+.callflows-port .monster-button-danger:hover,
+#callflow_container .monster-button-danger:hover {
+	background: #D61C0D;
+}
+
+.callflows-port .monster-button-success,
+#callflow_container .monster-button-success {
+	color: white;
+	border-color: #09A74B;
+	background: #09A74B;
+}
+
+.callflows-port .monster-button-success:hover,
+#callflow_container .monster-button-success:hover {
+	border-color: #18B65A;
+	background: #18B65A;
+}
+
+.callflows-port .items-selector .box-selector .item-selector {
+	color: #303039;
+}
+
+.callflows-port .items-selector .box-selector .item-selector:hover {
+	background: #22A5FF;
+	color: white;
+}
+
+.callflows-port .table.table-striped {
+	border-left: 0;
+	border-right: 0;
+}
+
+.callflows-port .table.table-striped thead tr {
+	color: #303039;
+	background: #D9D9D9;
+	font-weight: bold;
+}
+
+.callflows-port .table.table-striped thead tr th {
+	border-bottom: 1px solid #A6A6A6;
+}
+
+.callflows-port .table.table-striped thead tr th:not(:last-child) {
+	border-right: 1px solid #A6A6A6;
+}
+
+.callflows-port .table.table-striped thead tr th .fa {
+	margin-right: 5px;
+	color: #303039;
+}
+
+.callflows-port .table.table-striped .link-icon {
+	font-size: 20px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.callflows-port .table.table-striped .link-icon .fa {
+	color: #5C5C61;
+}
+
+.callflows-port .table.table-striped .link-icon .fa:hover,
+.callflows-port .table.table-striped .link-icon .fa:active {
+	color: #22A5FF;
+}
+
+.callflows-port .form-horizontal label.control-label {
+	float: left;
+	width: 160px;
+	padding-top: 5px;
+	text-align: right;
+}
+
+.callflows-port .callflow-panel {
+	background: #22A5FF;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
+
+.callflows-port .callflow-panel_title {
+	color: #eeeeee;
+	font-weight: bold;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 10px 10px 0 0;
+}
+
+.callflows-port .callflow-panel_body {
+	background: #EEEEEE;
+	padding: 15px 15px 20px;
+}
+
+.callflows-port .callflow-panel_body_item {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px 10px 0;
+}
+
+.callflows-port .link-with-icon .fa {
+	margin-right: 5px;
+}
+
+.ui-dialog-content .monster-link:not(.disabled):hover,
+.ui-dialog-content .monster-link:not(.disabled):hover .fa,
+.ui-dialog-content .monster-link:not(.disabled):focus,
+.ui-dialog-content .monster-link:not(.disabled):focus .fa {
+	background: transparent;
+	color: #22A5FF;
+}
+
+.callflows-drag-and-drop {
+	width: 285px;
+	height: 148px;
+	background: url('static/images/callflows-drag-and-drop.gif') no-repeat;
+}
+
+.callflows-form.form-inline .form-label-wrapper {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	width: 160px;
+	margin-right: 0;
+	margin-bottom: 13px;
+	padding-top: 10px;
+}
+
+.callflows-form.form-inline .form-field-wrapper {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.callflows-message-container {
+	padding: 10px 20px 20px;
+}
+
+.callflows-message {
+	border: 1px solid #22A5FF;
+	background: #22A5FF;
+}
+
+.callflows-message .text-wrapper {
+	color: white;
+}
+
+.help-box .wrapper-icon {
+	background: white;
+}
+
+.callflows-message .fa {
+	color: #22A5FF !important;
+}
+
+/*
+ * Bootstrap guide tour - override styles
+ */
+.popover[class*="tour-"] {
+	min-width: 350px;
+}
+
+.tour-backdrop {
+	opacity: 0.6;
+}
+
+/**************************
+----TOP TABS MEDIA---------
+****************************/
+.callflows-port .media_tabs {
+	position:relative;
+	overflow-x: auto;
+	background: #eee;
+	border: none;
+	height: auto;
+	min-height: 0;
+	padding: 10px 10px 5px;
+}
+
+.callflows-port .media_tabs .buttons {
+	width: 145px;
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+	position: relative;
+	margin: 0 10px 10px 0;
+	padding-left: 20px;
+	text-align: left;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	opacity: 0.5;
+	background: #22A5FF;
+}
+
+.callflows-port .media_tabs .buttons:hover {
+	-moz-box-shadow: 3px 5px 10px #383838;
+	-webkit-box-shadow: 3px 5px 10px #383838;
+	box-shadow: 3px 5px 10px #383838;
+	opacity: 1;
+}
+
+.callflows-port .media_tabs .buttons.current,
+.callflows-port .media_tabs .buttons.current:hover {
+	-moz-box-shadow: 3px 5px 10px #383838;
+	-webkit-box-shadow: 3px 5px 10px #383838;
+	box-shadow: 3px 5px 10px #383838;
+	opacity: 1;
+}
+
+.callflows-port .media_tabs .buttons .fa {
+	margin-right: 10px;
+	color: white;
+	font-size: 24px;
+	vertical-align: -3px;
+}
+
+.callflows-port .media_tabs .buttons .fa-mobile {
+	font-size: 30px;
+	vertical-align: -4px;
+}
+
+.callflows-port .media_tabs .buttons .label_device {
+	font-size: 16px;
+	text-transform: uppercase;
+	color: white;
+}
+
+.callflows-port #resource-view .realm_label {
+	line-height: 22px;
+}
+
+.callflows-port .media_pane {
+	margin-left: 0;
+	margin-top: 30px;
+}
+
+.callflows-port #resource-form .provisioner select {
+	width: 100px;
+	margin-left: 10px;
+}
+
+.callflows-port #resource-form .provisioner {
+	display: inline-block;
+	margin-left: 22px;
+}
+
+.callflows-port .input .text {
+	display: inline-block;
+	width: 210px;
+	height: 20px;
+	margin-bottom: 10px;
+	padding: 4px 6px;
+}
+
+.callflows-port #resource-form .shoutcast-div {
+	display: none;
+}
+
+.callflows-port #resource-form .shoutcast-div.active {
+	display: block;
+}
+

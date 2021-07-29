@@ -1,0 +1,202 @@
+<div>
+	<div class="whapp-header clearfix">
+		{{#if data.id}}
+			<h1>{{ i18n.resources.edit_gateway }}</h1>
+		{{else}}
+			<h1>{{ i18n.resources.add_gateway }}</h1>
+		{{/if}}
+		<div class="buttons-right pasted view-buttons">
+			<button class="btn black basic activate">{{ i18n.resources.basic }}</button>
+			<button class="btn black advanced">{{ i18n.resources.advanced }}</button>
+		</div>
+	</div>
+
+	<div>
+		<ul class="tabs" data-tabs="tabs">
+			<li class="active"><a href="#basic">{{ i18n.resources.basic }}</a></li>
+			<li><a href="#options">{{ i18n.resources.options }}</a></li>
+			<li><a href="#audio_settings">{{ i18n.resources.audio }}</a></li>
+			<li><a href="#caller_id">{{ i18n.resources.caller_id }}</a></li>
+		</ul>
+		<form id="resource-form" action="" method="post">
+			<div class="pill-content">
+				<div class="active basic_view" id="basic">
+					<div class="clearfix">
+						<label for="name">{{ i18n.resources.server_name }}</label>
+						<div class="input">
+							<input class="span4" id="name" name="name" type="text" placeholder="{{ i18n.resources.name }}" value="{{ data.name }}" rel="popover" data-content="{{ i18n.resources.name_data_content }}" required/>
+						</div>
+					</div>
+					
+					<div class="clearfix">
+						<label for="gateways_server">{{ i18n.resources.server }}</label>
+						<div class="input">
+							<input class="span4" id="gateways_server" name="gateways[].server" type="text" placeholder="{{ i18n.resources.server }}" value="{{ data.gateways.[0].server }}" rel="popover" data-content="{{ i18n.resources.server_data_content }}" required/>
+						</div>
+					</div>
+
+					<div class="clearfix">
+						<label for="gateways_server">{{ i18n.resources.port }}</label>
+						<div class="input">
+							<input class="span4" id="gateways_port" name="gateways[].port" type="text" placeholder="" value="{{ data.gateways.[0].port }}" rel="popover" data-content="{{ i18n.resources.port_data_content }}"/>
+						</div>
+					</div>
+
+					<div class="clearfix">
+						<label for="gateways_server">{{ i18n.resources.username }}</label>
+						<div class="input">
+							<input class="span4" id="gateways_username" name="gateways[].username" type="text" placeholder="{{ i18n.resources.username }}" value="{{ data.gateways.[0].username }}" rel="popover" data-content="{{ i18n.resources.username_data_content }}"/>
+						</div>
+					</div>
+
+					<div class="clearfix">
+						<label for="gateways_password">{{ i18n.resources.password }}</label>
+						<div class="input">
+							<input class="span4" id="gateways_password" name="gateways[].password" type="password" placeholder="" value="{{ data.gateways.[0].password }}" rel="popover" data-content="{{ i18n.resources.password_data_content }}"/>
+						</div>
+					</div>
+
+					<div class="clearfix">
+						<label for="weight_cost">{{ i18n.resources.weight_cost }}</label>
+						<div class="input">
+							<input class="span4" id="weight_cost" name="weight_cost" type="text" placeholder="" value="{{ data.weight_cost }}" rel="popover" data-content="{{ i18n.resources.priority_data_content }}"/>
+						</div>
+					</div>
+
+					<div class="clearfix">
+						<div class="input">
+							<ul class="inputs-list">
+								<li>
+									<label>
+										<span rel="popover" data-content="{{ i18n.resources.enabled_data_content }}">
+											<input type="checkbox" id="enabled" name="enabled"{{#if data.enabled}} checked="checked"{{/if}}/>
+											<span>{{ i18n.resources.enabled }}</span>
+										</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" value="{{ data.resource_type }}" name="resource_type"/>
+
+				<div id="options">
+					<div class="clearfix">
+                        <label for="gateways_realm">{{ i18n.resources.realm }}</label>
+                        <div class="input">
+                            <input class="span4" name="gateways.0.realm" id="gateways_realm" type="text" placeholder="{{ i18n.resources.realm_placeholder }}" value="{{ data.gateways.[0].realm }}" rel="popover" data-content="{{ i18n.resources.realm_data_content }}"/>
+                        </div>
+                    </div>
+
+                    <div class="clearfix">
+                        <div class="input">
+                            <ul class="inputs-list">
+                                <li>
+                                    <label>
+                                        {{#if data.gateways.[0].format_from_uri}}
+                                            <input type="checkbox" id="gateways_format_from_uri" name="gateways.0.format_from_uri" checked="checked" rel="popover" data-content="{{ i18n.resources.pass_realm_in_invite_data_content }}"/>
+                                        {{else}}
+                                            <input type="checkbox" id="gateways_format_from_uri" name="gateways.0.format_from_uri" rel="popover" data-content="{{ i18n.resources.pass_realm_in_invite_data_content }}"/>
+                                        {{/if}}
+                                        <span>{{ i18n.resources.pass_realm_in_invite }}</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="clearfix">
+                        <label for="rules">{{ i18n.resources.rules }}</label>
+                        <div class="input">
+                            <input type="text" id="rules" name="rules[]" value="{{ data.rules.[0] }}" rel="popover" data-content="{{ i18n.resources.rules_data_content }}"/>
+                        </div>
+                    </div>
+
+                    <div class="clearfix">
+                        <label for="gateways_prefix">{{ i18n.resources.prefix }}</label>
+                        <div class="input">
+                            <input type="text" name="gateways[].prefix" id="gateways_prefix" value="{{ data.gateways.[0].prefix }}" rel="popover" data-content="{{ i18n.resources.prefix_data_content }}"/>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <label for="gateways_suffix">{{ i18n.resources.suffix }}</label>
+                        <div class="input">
+                            <input type="text" name="gateways[].suffix" id="gateways_suffix" value="{{ data.gateways.[0].suffix }}" rel="popover" data-content="{{ i18n.resources.suffix_data_content }}"/>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <label for="gateways_progress_timeout">{{ i18n.resources.progress_timeout }}</label>
+                        <div class="input">
+                            <input type="text" name="gateways.0.progress_timeout" id="gateways_progress_timeout" value="{{ data.gateways.[0].progress_timeout }}" rel="popover" data-content="{{ i18n.resources.progress_timeout_data_content }}"/>
+                        </div>
+                    </div>
+
+                    <div class="clearfix">
+                        <label for="flags">{{ i18n.resources.flags }}</label>
+                        <div class="input">
+                            <input type="text" name="extra.flags" value="{{ data.flags }}" rel="popover" data-content="{{ i18n.resources.flags_help }}"/>
+                        </div>
+                    </div>
+
+                    <div class="clearfix">
+                        <div class="input">
+                            <ul class="inputs-list">
+                                <li>
+                                    <label>
+                                        {{#if data.peer}}
+                                            <input type="checkbox" id="peer" name="peer" checked="checked" rel="popover" data-content=""/>
+                                        {{else}}
+                                            <input type="checkbox" id="peer" name="peer" rel="popover" data-content=""/>
+                                        {{/if}}
+                                        <span>{{ i18n.resources.peer }}</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+				</div>
+
+				<div id="audio_settings">
+
+					{{#each field_data.media.audio.codecs}}
+						<div>
+							<div class="input">
+								<ul class="inputs-list">
+									<li>
+										<label>
+											<input type="checkbox" name="gateways[].codecs[]"{{#ifInArray @key ../data.gateways.[0].codecs}} checked="checked"{{/ifInArray}} rel="popover" data-content="" value="{{ @key }}"/>
+											<span>{{ this }}</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					{{/each}}
+				</div>
+
+				
+				<div id="caller_id">
+                    <div class="clearfix">
+                        <label for="caller_id_options_type">{{ i18n.resources.type }}</label>
+                        <div class="input">
+                            <select name="caller_id_options.type" id="caller_id_options_type" class="medium" rel="popover" data-content="{{ i18n.resources.type_data_content }}">
+                                {{#each field_data.caller_id_options.type}}
+                                    <option value="{{ @key }}"{{#ifInArray @key ../data.caller_id_options.type}} selected="selected"{{/ifInArray}}>{{ this }}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+			</div>
+		</form>
+
+		<div class="buttons-wrapper">
+			{{#if data.id}}
+				<button class="monster-button monster-button-danger resource-delete">{{ i18n.resources.delete }}</button>
+			{{/if}}
+			<button class="monster-button monster-button-success resource-save">{{ i18n.resources.save }}</button>
+		</div>
+	</div>
+</div>

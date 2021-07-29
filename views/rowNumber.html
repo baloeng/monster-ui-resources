@@ -1,0 +1,48 @@
+<div class="number_row">
+	{{#if numbers.[1]}}
+		<div class="number_column first" data-number="{{numbers.[0]}}">
+			{{#compare numbers.[0] "===" "no_match"}}
+				{{ i18n.oldCarriers.catch_all }}
+			{{else}}
+				{{#compare numbers.[0] "===" ""}}
+					{{ i18n.oldCarriers.no_number }}
+				{{else}}
+					{{ numbers.[0] }}
+				{{/compare}}
+			{{/compare}}
+			<span class="delete"/>
+		</div>
+
+		<div class="number_column second" data-number="{{numbers.[1]}}">
+			{{#compare numbers.[1] "===" "no_match"}}
+				{{ i18n.oldCarriers.catch_all }}
+			{{else }}
+				{{#compare numbers.[1] "===" ""}}
+					{{ i18n.oldCarriers.no_number }}
+				{{else}}
+					{{ numbers.[1] }}
+				{{/compare}}
+			{{/compare}}
+			<span class="delete"/>
+		</div>
+	{{else}}
+		{{#if numbers.[0]}}
+			<div class="number_column first" data-number="{{numbers.[0]}}">
+				{{#compare numbers.[0] "===" "no_match"}}
+					{{ i18n.oldCarriers.catch_all }}
+				{{else}}
+					{{#compare numbers.[0] "===" ""}}
+						{{ i18n.oldCarriers.no_number }}
+					{{else}}
+						{{ numbers.[0] }}
+					{{/compare}}
+				{{/compare}}
+				<span class="delete"/>
+			</div>
+			<div class="js-add-number number_column empty second add-number">{{ i18n.oldCarriers.click_to_add_number }}</div>
+		{{else}}
+			<div class="js-add-number number_column empty full add-number">{{ i18n.oldCarriers.click_to_add_number }}</div>
+		{{/if}}
+	{{/if}}
+	<div class="clear"/>
+</div>
