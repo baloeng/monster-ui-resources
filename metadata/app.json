@@ -12,7 +12,7 @@
 	],
 	"icon": "Carriers_app.png",
 	"api_url": "http://10.26.0.41:8000/v2",
-	"author": "Emmanuel Balogun Revised From Callfow App",
+	"author": "Emmanuel Balogun Edited From Callfow App",
 	"version": "1.0",
 	"license": "-",
 	"price": 0,
