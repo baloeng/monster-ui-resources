@@ -242,7 +242,6 @@ define(function(require) {
 				localresource_html;
 
 			if (typeof data.data === 'object' && data.data.resource_type) {
-				console.log(data.data.resource_type);
 				localresource_html = $(self.getTemplate({
 					name: data.data.resource_type,
 					data: _.merge({
