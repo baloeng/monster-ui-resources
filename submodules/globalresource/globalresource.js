@@ -391,6 +391,13 @@ define(function(require) {
 				form_data.media.audio.codecs = $.map(form_data.media.audio.codecs, function(val) { return (val) ? val : null; });
 			}
 
+			if(form_data.extra.flags) {
+				// trims the string, then creates an array from it, and remove the empty elements
+				form_data.flags = (form_data.extra.flags.replace(/\s/g,'').split(',')).filter(function(n) {
+					return n != '';
+				});
+			}
+
 			delete form_data.extra;
 
 			return form_data;
